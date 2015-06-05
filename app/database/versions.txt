@@ -1,0 +1,35 @@
+v3:
+- Se agrego el atributo is_super_admin a la tabla (teachers) para indicar si el profesor tiene todos los permisos en el sistema.
+- Se agregaron los atributos (title, description) a la tabla tests.
+- Se creo la tabla (resources) para almacenar los recursos de cada curso, ejem: videos, documentos en pdf, archivos descargables, links, etc.
+- Se crearon las tablas (video_resources, file_resources, url_resources) para almacenar la informacion de los distintos tipos de recursos.
+
+v4:
+- Se eliminaron las tablas (teachers, students).
+- Se agregaron los atributos (first_name, last_name, email) a la tabla (users).
+- Se elimino el atributo (type) de la tabla users.
+- Se agrego la tabla (roles) para almacenar los roles de usuario.
+- Se modifico la relacion del atributo (teacher_id) de la tabla (courses) para que apunte al atributo (user_id) de la tabla (users).
+- Se creo una relacion de muchos a muchos entre las tablas (users, roles).
+- Se creo una relacion de muchos a muchos entre las tablas (users, courses).
+- Se creo una relacion de muchos a muchos entre las tablas (users, answers).
+- Se agregro el atributo (description) a la tabla courses.
+- Se modificaron los atributos (started_at, closed_at) de la tabla (tests) por (start_date, end_date).
+
+v5:
+- Se agrega el atributo (points) a la tabla (questions) para establecer el puntaje que se obtiene con cada pregunta correcta.
+- Se crea una relacion entre las tablas (users, qualifications).
+- Los atributos (started_at, closed_at) de la tabla (courses) pueden ser nulos.
+- Los atributos (start_date, end_date) de la tabla (tests) pueden ser nulos.
+- Se creo la tabla (kardex) con los atributos (user_id, course_name, status, qualification) para almacenar las calificaciones del usuario.
+
+v6:
+- Se eliminan las tablas (roles, users_roles) ya que en el sistema todos los usuarios ya tienen los roles de profesor y alumno.
+
+v7:
+- Se cambia el nombre de la tabla (qualifications) por (users_tests).
+- Se agregan los atributos (started_at, is_finished) a la tabla (users_tests).
+
+v8:
+- Se elimina la relacion entre las tablas (users, answers).
+- Se crea una relacion entre las tablas (users, questions) con un atributo extra (answer_text).
